@@ -18,6 +18,19 @@ const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
         title: 'English',
+        children: {
+            title: 'Language',
+            data: [
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                 {
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+            ],
+        },
     },
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -37,6 +50,14 @@ function Header() {
             setSearchResult([])
         }, 0)
     }, [])
+    //handle logic
+    const hendleMenuChange = (menuItem) => {
+        switch (menuItem.type) {
+            case 'language':
+                break;
+            default:
+         }
+    };
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -79,6 +100,7 @@ function Header() {
                     <Button primary >Log in</Button>
                     <Menu
                         items={MENU_ITEMS}
+                        onChange={hendleMenuChange}
                     >
                         <button className={cx('more-btn')}>
                          <FontAwesomeIcon icon={faEllipsisVertical} />
