@@ -4,7 +4,7 @@ import Tippy from '@tippyjs/react';
 import HeaderlessTippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark , faSpinner , faMagnifyingGlass, faEllipsisVertical, faEarthAsia, faCircleQuestion, faKeyboard, faCloudUpload, faUser, faCoins, faGear, faSignOut } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark , faSpinner , faMagnifyingGlass, faEllipsisVertical, faEarthAsia, faCircleQuestion, faKeyboard, faUser, faCoins, faGear, faSignOut } from '@fortawesome/free-solid-svg-icons';
 
 
 import Button from '~/components/Button';
@@ -13,6 +13,8 @@ import styles from './Header.module.scss';
 import tiktokLogo from '~/assets/images/logoIntagram.svg';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import { UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles)
 
@@ -129,7 +131,7 @@ function Header() {
                         <>
                             <Tippy delay={[0, 230]} content =  "upload Video" placement='bottom'>
                             <button className={cx('action-btn')}>
-                                <FontAwesomeIcon icon={faCloudUpload} />
+                                <UploadIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -142,9 +144,11 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={hendleMenuChange}>
                         {currentUser ? (
-                            <img className={cx('user-avatar')}
+                            <Image className={cx('user-avatar')}
                             src='https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/311694773_908430393473557_4231130014534670841_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=fCjYafxIVv4AX_lcEw7&_nc_ht=scontent.fhan14-1.fna&oh=00_AfDbCFywbykp3he9nwscCEcPnwq9AvYo912bH4Y1GQ1wZQ&oe=64C29BA3'
-                            alt="Nguyễn Đức Duy" />
+                                alt="Nguyễn Đức Duy"
+                            fallback= "https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/311694773_908430393473557_4231130014534670841_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=fCjYafxIVv4AX_lcEw7&_nc_ht=scontent.fhan14-1.fna&oh=00_AfDbCFywbykp3he9nwscCEcPnwq9AvYo912bH4Y1GQ1wZQ&oe=64C29BA3"
+                            />
                         ) : (
                         <button className={cx('more-btn')}>
                          <FontAwesomeIcon icon={faEllipsisVertical} />
