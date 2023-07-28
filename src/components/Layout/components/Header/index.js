@@ -12,7 +12,8 @@ import {
     faSignOut,
 } from '@fortawesome/free-solid-svg-icons';
 
-
+import routesConfig from '~/config/router'
+import { Link } from 'react-router-dom';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import tiktokLogo from '~/assets/images/logoIntagram.svg';
@@ -92,9 +93,11 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                {/* <div className={cx('logo')}> */}
-                     <img src={tiktokLogo} alt="TikTok Logo" className={cx('logo-svg')} />
-                {/* </div> */}
+               
+                <Link to={routesConfig.home} className={cx('logo-link')}>
+                    <img src={tiktokLogo} alt="TikTok Logo" className={cx('logo-svg')} />
+                </Link>
+
 
                 <Search />
                 <div className={cx('actions')}>
