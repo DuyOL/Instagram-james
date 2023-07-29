@@ -34,6 +34,8 @@ function Menu({ children, items = [], hideOnClick = false , onChange = defaultFn
     }
     return (
         <Tippy
+            //visible ẩn hiện menu-item
+            // visible
             interactive
             delay={[0, 700]}
             offset={[12, 8]}
@@ -45,11 +47,11 @@ function Menu({ children, items = [], hideOnClick = false , onChange = defaultFn
                             {history.length > 1 && <Header title="Language" onBack={() => {
                                 setHistory(prev => prev.slice(0,prev.length-1))
                             }} />}
-                               {renderItems()}
+                              <div className={cx('menu-body')}>{renderItems()}</div >
                         </PopperWrapper>
                     </div>                          
             )}
-            onHide={() => setHistory(prev => prev.slice(0,1))}
+            onHide={() => setHistory(prev => prev.slice(0, 1))}
             >
             {children}
         </Tippy>

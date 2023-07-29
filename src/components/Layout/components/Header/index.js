@@ -21,6 +21,7 @@ import Menu from '~/components/Popper/Menu';
 import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
+import myAvatar from '~/assets/images/avatar.jpg';
 
 const cx = classNames.bind(styles)
 
@@ -38,6 +39,42 @@ const MENU_ITEMS = [
                  {
                     code: 'vi',
                     title: 'Tiếng Việt',
+                },
+                  {
+                    code: 'ar',
+                    title: 'عربي',
+                },
+                  {
+                    code: 'pr',
+                    title: 'Français',
+                },
+                  {
+                    code: 'hq',
+                    title: '한국인',
+                },
+                 {
+                    code: 'cn',
+                    title: '中国人',
+                },
+                   {
+                    code: 'cr',
+                    title: 'Português',
+                },
+                    {
+                    code: 'bn',
+                    title: 'Español',
+                },
+                     {
+                    code: 'dt',
+                    title: 'עִברִית',
+                },
+                     {
+                    code: 'dc',
+                    title: 'Русский',
+                },
+                     {
+                    code: 'dm',
+                    title: 'dansk',
                 },
             ],
         },
@@ -130,7 +167,7 @@ function Header() {
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={hendleMenuChange}>
                         {currentUser ? (
                             <Image className={cx('user-avatar')}
-                            src='https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/311694773_908430393473557_4231130014534670841_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=fCjYafxIVv4AX_lcEw7&_nc_ht=scontent.fhan14-1.fna&oh=00_AfDbCFywbykp3he9nwscCEcPnwq9AvYo912bH4Y1GQ1wZQ&oe=64C29BA3'
+                            src={myAvatar}
                                 alt="Nguyễn Đức Duy"
                             fallback= "https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/311694773_908430393473557_4231130014534670841_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=fCjYafxIVv4AX_lcEw7&_nc_ht=scontent.fhan14-1.fna&oh=00_AfDbCFywbykp3he9nwscCEcPnwq9AvYo912bH4Y1GQ1wZQ&oe=64C29BA3"
                             />
