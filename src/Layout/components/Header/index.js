@@ -135,7 +135,7 @@ function Header() {
                     <img src={tiktokLogo} alt="TikTok Logo" className={cx('logo-svg')} />
                 </Link>
 
-
+                {/* <Button>Click Me</Button> */}
                 <Search />
                 <div className={cx('actions')}>
                 {currentUser ? (
