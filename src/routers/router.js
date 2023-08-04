@@ -24,8 +24,8 @@ const publicRoutes = [
     { path: config.routes.message, component: Message },
     { path: config.routes.notification, component: Notification },
     { path: config.routes.profile, component: Profile },
-    { path: config.routes.upload, component: Upload, layout: HeaderOnly },
-    { path: config.routes.search, component: Search , layout: null },
+    { path: config.routes.upload, component: Upload  },
+    { path: config.routes.search, component: Search , layout: HeaderOnly }, // Có thể để layout:null để tắt phần header vào thẳng layout Search
     
 ];
 

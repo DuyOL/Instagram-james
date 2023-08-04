@@ -25,8 +25,8 @@ body{
    font-size: 1.6rem;
    line-height: 1.5;
    text-rendering: optimizeSpeed;
-    color: var(--text-color);
-    overflow-y: overlay;
+   color: var(--text-color);
+   overflow-y: overlay;
 }
 // Thanh cuộn scrollbar
 html *::-webkit-scrollbar {

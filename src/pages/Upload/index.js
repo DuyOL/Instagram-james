@@ -1,4 +1,4 @@
 function Upload() {
-    return <h2>Upload pace</h2>
+    return <h2>Tạo Video</h2>
 }
 export default Upload;
