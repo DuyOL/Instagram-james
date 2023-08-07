@@ -9,7 +9,6 @@ import Following from '~/pages/Following';
 import Profile from '~/pages/Profile';
 import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
-// Router.js
 import Discover from '~/pages/Discover';
 import Real from '~/pages/Real';
 import Message from '~/pages/Message';

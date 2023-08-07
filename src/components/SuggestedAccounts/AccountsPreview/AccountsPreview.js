@@ -10,7 +10,7 @@ function AccountsPreview() {
         <div className={cx('wrapper')}>
             <div className={cx('header')}>
                 <img className={cx('avatar')}
-                    src='https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/06cb89dd4f719aea59b8bd55a375a6ce.jpeg?x-expires=1691226000&x-signature=OBFnXFO3vgkbYmRk00F37LGNNKc%3D'
+                    src='https://ss-images.saostar.vn/w800/2023/6/5/pc/1685940903393/saostar-o51kcnmf0vpv9evs.png'
                     alt=''></img>
                 
                 <Button className={cx('folow-btn')} primary>

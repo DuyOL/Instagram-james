@@ -1,0 +1,48 @@
+.wrapper{
+   display: flex;
+   margin-top: 28px;
+}
+.header{
+    justify-content: space-between;
+}
+.avatar{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.body{
+ margin-left: 12px;
+    color:#161823;
+    width: 35rem;
+}
+strong{
+    cursor: pointer;
+    padding: 0 2px;
+    transition: opacity 0.3s ease;
+    &:hover{
+     opacity: 0.5;
+    }
+}
+.name{
+    font-size: 1.7rem;
+}
+.nickname{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.check{
+    font-size: 1.4rem;
+    color: #28d5ec;
+    margin-left: 8px;
+}
+.time-name{
+    margin-left: 5px;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+.ellipsis{
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 4px 8px;
+}

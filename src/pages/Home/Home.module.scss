@@ -1,0 +1,114 @@
+.wrapper{
+    margin-top: 14px;
+    margin-left: 370px;
+}
+.header{
+    justify-content: space-between;
+}
+.avatar{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.body{
+    margin-left: 12px;
+    color:#161823;
+    width: 35rem;
+}
+strong{
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    &:hover{
+     opacity: 0.5;
+    }
+}
+.name{
+    font-size: 1.7rem;
+}
+.nickname{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.check{
+    font-size: 1.4rem;
+    color: #28d5ec;
+    margin-left: 8px;
+}
+.time-name{
+    margin-left: 5px;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+.ellipsis{
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+.content {
+  margin-top: 12px;
+}
+.img-content{
+    margin-top: 14px;
+    width: 440px;
+}
+.img-content2{
+    margin-top: 14px;
+    width: 340px;
+    height: 340px;
+}
+// tương tác like shere
+.interact{
+  display: flex;
+}
+.icon{
+   padding-top: 4px;
+   padding-bottom: 4px;
+   margin-right: 29rem;
+}
+.love-icon,
+.comment-icon,
+.message-icon{
+   padding: 6px 16px 6px 0px;
+   font-size: 2.3rem;
+   cursor: pointer;
+   transition: opacity 0.3s ease;
+   &:hover{
+     opacity: 0.5;
+   }
+}
+// chi tiết
+.detail-like{
+   font-weight: 600;
+   cursor: pointer;
+}
+.detail-comment{
+    margin: 4px 0px;
+    font-size: 1.5rem;
+   cursor: pointer;
+}
+.detail-more{
+   margin: 4px 0px;
+   font-size: 1.3rem;
+   opacity: 0.7;
+   cursor: pointer;
+}
+.detail-translation{
+   margin: 2px 0px;
+   font-size: 1.6rem;
+   cursor: pointer;
+   font-weight: 600;
+}
+.detail-seeall{
+   opacity: 0.7;
+   cursor: pointer;
+}
+.comment{
+    width: 415px;
+    border: none;
+    outline: none;
+    opacity: 0.7;
+    padding: 20px 0 21px 0;
+    border-bottom :1px solid #e3e3e4;
+}
+

@@ -9,7 +9,8 @@
     transition: background-color ease-in-out 200ms;
 
     &.active{
-        color: var(--primary);
+        color: var(--text-color);
+        font-size: 2.2rem;
         .icon{
             display: none;
         }

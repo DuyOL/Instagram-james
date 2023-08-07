@@ -35,7 +35,7 @@ function Sidebar() {
             <MenuItem title="Tạo" to={config.routes.upload} icon={<CreateIcon />} />
         </Menu>
         <SuggestedAccounts label="Được đề xuất" />
-        <SuggestedAccounts label="Theo dõi tài khoản"/>
+        {/* <SuggestedAccounts label="Theo dõi tài khoản"/> */}
     </aside>
 }
 export default Sidebar;
