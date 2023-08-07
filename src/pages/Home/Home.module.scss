@@ -111,4 +111,31 @@ strong{
     padding: 20px 0 21px 0;
     border-bottom :1px solid #e3e3e4;
 }
-
+.video-content {
+  width: 100%; /* Độ rộng video 100% */
+  max-width: 50%;
+  height: 10%;
+  border: 1px solid #ccc; 
+}
+.video-content::-webkit-media-controls-play-button,
+.video-content::-webkit-media-controls-start-playback-button {
+  display: none;
+}
+.video-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 1;
+}
+.video-controls svg {
+  color: white;
+  font-size: 24px;
+}

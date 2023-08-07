@@ -3,9 +3,11 @@ import styles from './Home.module.scss';
 import PageHome from './PageHome';
 import PageHome1 from './PageHome/PageHome1';
 import PageHome2 from './PageHome/PageHome2';
+import PageHome3 from './PageHome/PageHome3';
 import ImgHome from './ImgHome/ImgHome';
 import ImgHome1 from './ImgHome/ImgHome1';
 import ImgHome2 from './ImgHome/ImgHome2';
+import ImgHome3 from './ImgHome/ImgHome3';
 
 
 
@@ -31,6 +33,12 @@ function Home() {
                 <PageHome2/>                
             <div className={cx('container')}>
                 <ImgHome2 />
+            </div>
+            </div>
+             <div className={cx('header')}>
+                <PageHome3/>                
+            <div className={cx('container')}>
+                <ImgHome3 />
             </div>
             </div>
         </div>
