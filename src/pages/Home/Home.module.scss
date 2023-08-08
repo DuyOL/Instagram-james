@@ -57,6 +57,11 @@ strong{
     width: 340px;
     height: 340px;
 }
+.img-content3{
+    margin-top: 14px;
+    width: 340px;
+    height: 440px;
+}
 // tương tác like shere
 .interact{
   display: flex;
@@ -85,7 +90,7 @@ strong{
 .detail-comment{
     margin: 4px 0px;
     font-size: 1.5rem;
-   cursor: pointer;
+   cursor: pointer;  
 }
 .detail-more{
    margin: 4px 0px;
@@ -112,10 +117,19 @@ strong{
     border-bottom :1px solid #e3e3e4;
 }
 .video-content {
-  width: 100%; /* Độ rộng video 100% */
+  width: 100%; 
   max-width: 50%;
-  height: 10%;
-  border: 1px solid #ccc; 
+  height: 550px;
+}
+.video-content1{
+  width: 100%; 
+  max-width: 50%;
+  height: 450px;
+}
+.video-content3{
+  width: 100%; 
+  max-width: 80%;
+  height: 250px;
 }
 .video-content::-webkit-media-controls-play-button,
 .video-content::-webkit-media-controls-start-playback-button {

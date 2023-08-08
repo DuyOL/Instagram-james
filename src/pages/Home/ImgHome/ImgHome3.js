@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 function ImgHome() {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
-  const [videoStarted, setVideoStarted] = useState(false); // State to track if video has started
+  const [videoStarted, setVideoStarted] = useState(false);
   const videoRef = useRef(null);
 
   const handleCommentChange = (event) => {

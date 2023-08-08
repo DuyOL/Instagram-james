@@ -12,12 +12,12 @@ function PageHome() {
                 <div className={cx('header')}>
                     <img className={cx('avatar')}
                         src={avatar}
-                        alt='Cô Bé Bán Diêm'
+                        alt='Cô Bé'
                     />
                 </div>
                 <div className={cx('body')}>
                     <p className={cx('name')}>
-                        <strong>Em </strong>
+                        <strong>Chúng ta của sau này</strong>
                         <strong className={cx('time-name')}>8 giờ trước</strong>
                     </p>
                     <strong className={cx('nickname')}>Crush</strong>
