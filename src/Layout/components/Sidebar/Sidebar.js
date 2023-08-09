@@ -29,7 +29,7 @@ function Sidebar() {
             <MenuItem title="Trang chủ" to={config.routes.home} icon={<HomeIcon />} activeIcon={<HomeActiveIcon />} />
             <MenuItem title="Tìm kiếm" to={config.routes.following} icon={<SearchIcons />} activeIcon={<SearchActiveIcon />} />
             <MenuItem title="Khám phá" to={config.routes.discover} icon={<DiscoverIcon />} activeIcon={<DiscoverActiveIcon />} />
-            <MenuItem title="Real" to={config.routes.real} icon={<ReelsIcon />} activeIcon={<ReelsActiveIcon />} />
+            <MenuItem title="Phim ngắn" to={config.routes.real} icon={<ReelsIcon />} activeIcon={<ReelsActiveIcon />} />
             <MenuItem title="Tin nhắn" to={config.routes.message} icon={<MessageIcons />} activeIcon={<MessageActiveIcons />}/>
             <MenuItem title="Thông báo" to={config.routes.notification} icon={<NotificationIcon />} activeIcon={<NotificationActiveIcon />} />
             <MenuItem title="Tạo" to={config.routes.upload} icon={<CreateIcon />} />

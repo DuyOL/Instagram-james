@@ -1,21 +1,25 @@
-import video1 from '~/pages/Home/Videos/video1.mp4';
-import video2 from '~/pages/Home/Videos/video2.mp4';
-import video3 from '~/pages/Home/Videos/video3.mp4';
-import video4 from '~/pages/Home/Videos/video4.mp4';
 import video5 from '~/pages/Home/Videos/video5.mp4';
 import video6 from '~/pages/Home/Videos/video6.mp4';
 import video7 from '~/pages/Home/Videos/video7.mp4';
-import video8 from '~/pages/Home/Videos/video8.mp4';
+import video9 from '~/pages/Home/Videos/video9.mp4';
+import video10 from '~/pages/Home/Videos/video10.mp4';
+import video11 from '~/pages/Home/Videos/video11.mp4';
+import video12 from '~/pages/Home/Videos/video12.mp4';
+import video13 from '~/pages/Home/Videos/video13.mp4';
+import video14 from '~/pages/Home/Videos/video14.mp4';
+
 
 const videoData = [
-    { src: video1, title: 'Video 1' },
-    { src: video2, title: 'Video 2' },
-    { src: video3, title: 'Video 3' },
-    { src: video4, title: 'Video 4' },
-    { src: video5, title: 'Video 5' },
-    { src: video6, title: 'Video 6' },
-    { src: video7, title: 'Video 7' },
-    { src: video8, title: 'Video 8' },
+    { src: video5, title: 'Benzema Bóng Vàng', layout: 'horizontal' },
+    { src: video6, title: 'Ngoại Hạng Anh', layout: 'horizontal' },
+    { src: video7, title: 'Nhạc Chill nhiều thể loại', layout: 'horizontal' },
+    { src: video9, title: 'Người Đàn Ông', layout: 'horizontal' },
+    { src: video10, title: 'Zo Ro tryhard', layout: 'horizontal' },
+    { src: video11, title: 'Ace and Shank', layout: 'horizontal' },
+    { src: video12, title: 'Nhạc remex ', layout: 'horizontal' },
+    { src: video13, title: 'Nhạc Chill nhiều thể loại', layout: 'horizontal' },
+    { src: video14, title: 'Năm mới', layout: 'horizontal' },
+
 ];
 
 export default videoData;

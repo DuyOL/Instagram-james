@@ -6,17 +6,14 @@ import videoData from './videoData';
 const cx = classNames.bind(styles);
 
 function Real() {
+    const [activeIndex, setActiveIndex] = useState(0);
     const videoRefs = useRef([]);
-    const [activeIndex, setActiveIndex] = useState(null);
-    // Thêm null để không có video nào được chạy ban đầu
 
     const handleVideoClick = (index) => {
-        // Tắt và đặt thời gian về 0 cho tất cả video
-        videoRefs.current.forEach((videoRef) => {
-            videoRef.pause();
-            videoRef.currentTime = 0;
-            videoRef.muted = true;
-        });
+        // Dừng và reset thời gian video trước đó
+        videoRefs.current[activeIndex].pause();
+        videoRefs.current[activeIndex].currentTime = 0;
+        videoRefs.current[activeIndex].muted = true;
 
         // Bật âm thanh và chạy video mới
         videoRefs.current[index].play();
@@ -28,13 +25,17 @@ function Real() {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
 
-            // Tắt âm thanh cho tất cả video
-            videoRefs.current.forEach((videoRef) => {
-                videoRef.muted = true;
-            });
-
+            // Tắt âm thanh và dừng video ở trên
+            for (let i = 0; i < videoRefs.current.length; i++) {
+                if (i !== activeIndex) {
+                    videoRefs.current[i].muted = true;
+                    videoRefs.current[i].pause();
+                    videoRefs.current[i].currentTime = 0;
+                }
+            }
+            
             // Bật âm thanh cho video đang hoạt động
-            if (activeIndex !== null) {
+            if (scrollPosition >= 0) {
                 videoRefs.current[activeIndex].muted = false;
             }
         };
@@ -51,11 +52,15 @@ function Real() {
             {videoData.map((video, index) => (
                 <div
                     key={index}
-                    className={cx('video-container', { active: index === activeIndex })}
+                    className={cx('video-container', { 
+                        active: index === activeIndex,
+                        horizontal: video.layout === 'horizontal',
+                        square: video.layout === 'square'
+                    })}
                     onClick={() => handleVideoClick(index)}
                 >
                     <video
-                        ref={(ref) => (videoRefs.current[index] = ref)}
+                        ref={ref => (videoRefs.current[index] = ref)}
                         controls
                         className={cx('video')}
                     >
