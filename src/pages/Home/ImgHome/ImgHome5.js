@@ -41,7 +41,7 @@ function ImgHome() {
              
             </div>
           )}
-          <video ref={videoRef} className={cx("video-content1")} controls>
+          <video ref={videoRef} className={cx("video-content6")} controls>
             <source src={video} type="video/mp4" />
           </video>
         </div>

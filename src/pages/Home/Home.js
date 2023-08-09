@@ -13,6 +13,12 @@ import PageHome9 from './PageHome/PageHome9';
 import PageHome10 from './PageHome/PageHome10';
 import PageHome11 from './PageHome/PageHome11';
 import PageHome12 from './PageHome/PageHome12';
+import PageHome13 from './PageHome/PageHome13';
+import PageHome14 from './PageHome/PageHome14';
+import PageHome15 from './PageHome/PageHome15';
+import PageHome16 from './PageHome/PageHome16';
+
+
 
 
 import ImgHome from './ImgHome/ImgHome';
@@ -28,6 +34,13 @@ import ImgHome9 from './ImgHome/ImgHome9';
 import ImgHome10 from './ImgHome/ImgHome10';
 import ImgHome11 from './ImgHome/ImgHome11';
 import ImgHome12 from './ImgHome/ImgHome12';
+import ImgHome13 from './ImgHome/ImgHome13';
+import ImgHome14 from './ImgHome/ImgHome14';
+import ImgHome15 from './ImgHome/ImgHome15';
+import ImgHome16 from './ImgHome/ImgHome16';
+
+
+
 
 
 
@@ -115,6 +128,30 @@ function Home() {
                 <PageHome12/>                
             <div className={cx('container')}>
                 <ImgHome12 />
+            </div>
+            </div> 
+            <div className={cx('header')}>
+                <PageHome13/>                
+            <div className={cx('container')}>
+                <ImgHome13 />
+            </div>
+            </div> 
+             <div className={cx('header')}>
+                <PageHome14/>                
+            <div className={cx('container')}>
+                <ImgHome14 />
+            </div>
+            </div> 
+             <div className={cx('header')}>
+                <PageHome15/>                
+            <div className={cx('container')}>
+                <ImgHome15 />
+            </div>
+            </div> 
+            <div className={cx('header')}>
+                <PageHome16/>                
+            <div className={cx('container')}>
+                <ImgHome16 />
             </div>
             </div> 
         </div>
