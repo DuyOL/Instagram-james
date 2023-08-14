@@ -12,7 +12,7 @@ function PageHome() {
                 <div className={cx('header')}>
                     <img className={cx('avatar')}
                         src={avatar}
-                        alt='Tin'
+                        alt='Truong hưu tin'
                     />
                 </div>
                 <div className={cx('body')}>
