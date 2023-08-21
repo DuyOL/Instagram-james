@@ -1,4 +1,116 @@
-.wrapper{
-    margin-top: 14px;
-    margin-left: 370px;
+/* Upload.module.scss */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 600px;
+  margin-top: 14px;
+  margin-left: 370px;
+
+  h1 {
+    font-size: 30px;
+    padding: 6px;
+  }
+
+  .dropzone {
+    border: 2px dashed #3498db;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+
+    &.active {
+      border-color: #27ae60;
+    }
+
+    .uploaded-image {
+      object-fit: cover;
+      margin-top: 10px;
+      border-radius: 4px;
+      position: relative;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+
+      .add-image,
+      .delete-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 1px dashed #cccccc;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: border-color 0.2s ease;
+
+        span {
+          font-size: 32px;
+          line-height: 0;
+        }
+
+        &:hover {
+          border-color: #3498db;
+        }
+      }
+
+      .delete-image {
+        border: none;
+        background-color: rgba(255, 0, 0, 0.8);
+        color: white;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: rgba(255, 0, 0, 1);
+        }
+      }
+
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      color: #777;
+    }
+
+    .uploaded-images {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      gap: 10px;
+
+      .uploaded-image {
+        flex: 0 0 calc(33.333% - 10px);
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 10px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #2980b9;
+    }
+  }
 }

@@ -8,18 +8,16 @@ import video12 from '~/pages/Home/Videos/video12.mp4';
 import video13 from '~/pages/Home/Videos/video13.mp4';
 import video14 from '~/pages/Home/Videos/video14.mp4';
 
-
 const videoData = [
-    { src: video5, title: 'Benzema Bóng Vàng', layout: 'horizontal' },
-    { src: video6, title: 'Ngoại Hạng Anh', layout: 'horizontal' },
-    { src: video7, title: 'Nhạc Chill nhiều thể loại', layout: 'horizontal' },
-    { src: video9, title: 'Người Đàn Ông', layout: 'horizontal' },
-    { src: video10, title: 'Zo Ro tryhard', layout: 'horizontal' },
-    { src: video11, title: 'Ace and Shank', layout: 'horizontal' },
-    { src: video12, title: 'Nhạc remex ', layout: 'horizontal' },
-    { src: video13, title: 'Nhạc Chill nhiều thể loại', layout: 'horizontal' },
-    { src: video14, title: 'Năm mới', layout: 'horizontal' },
-
+    { src: video5, layout: 'horizontal' },
+    { src: video6, layout: 'horizontal' },
+    { src: video7, layout: 'horizontal' },
+    { src: video9, layout: 'horizontal' },
+    { src: video10, layout: 'horizontal' },
+    { src: video11, layout: 'horizontal' },
+    { src: video12, layout: 'horizontal' },
+    { src: video13, layout: 'horizontal' },
+    { src: video14, layout: 'horizontal' },
 ];
 
 export default videoData;

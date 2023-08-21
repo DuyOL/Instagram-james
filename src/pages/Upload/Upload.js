@@ -1,12 +1,72 @@
+// Upload.jsx
+import React, { useCallback, useState } from "react";
 import styles from './Upload.module.scss';
 import classNames from 'classnames/bind';
+import { useDropzone } from 'react-dropzone';
 
 const cx = classNames.bind(styles);
+
 function Upload() {
+    const [uploadedImages, setUploadedImages] = useState([]);
+    const [uploading, setUploading] = useState(false);
+
+    const onDrop = useCallback(acceptedFiles => {
+        setUploading(true);
+
+        const newImages = acceptedFiles.map(file => URL.createObjectURL(file));
+        setUploadedImages(prevImages => [...prevImages, ...newImages]);
+
+        // Simulate an upload delay
+        setTimeout(() => {
+            setUploading(false);
+        }, 1000);
+    }, []);
+
+    const handleRemoveImage = (index) => {
+        if (!uploading) {
+            const newImages = uploadedImages.filter((_, i) => i !== index);
+            setUploadedImages(newImages);
+        }
+    };
+
+    const handleAddImage = () => {
+        if (!uploading) {
+            // Implement your logic to add new images here
+        }
+    };
+
+    const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+
     return (
         <div className={cx('wrapper')}>
-           <h1> Thước Phim </h1>
+            <h1>Tạo bài viết mới</h1>
+            <div {...getRootProps()} className={cx('dropzone', { 'active': isDragActive })}>
+                <input {...getInputProps()} />
+                <div className={cx('uploaded-images')}>
+                    {uploadedImages.map((imageURL, index) => (
+                        <div key={index} className={cx('uploaded-image')}>
+                            <img src={imageURL} alt={`Uploaded ${index}`} />
+                            <div className={cx('delete-image')} onClick={() => handleRemoveImage(index)}>
+                                <span>X</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                {uploadedImages.length === 0 && (
+                    <p>
+                        Kéo và thả hình ảnh hoặc video vào đây
+                        hoặc nhấp để chọn <br />
+                    </p>
+                )}
+                {!uploading && (
+                    <div className={cx('add-image')} onClick={handleAddImage}>
+                        <span>+</span>
+                    </div>
+                )}
+            </div>
+            <button className={cx('button')}>Chọn từ máy tính</button>
         </div>
-    )
+    );
 }
+
 export default Upload;
