@@ -38,12 +38,7 @@ import ImgHome13 from './ImgHome/ImgHome13';
 import ImgHome14 from './ImgHome/ImgHome14';
 import ImgHome15 from './ImgHome/ImgHome15';
 import ImgHome16 from './ImgHome/ImgHome16';
-
-
-
-
-
-
+import ImgHome17 from './ImgHome/ImgHome17';
 
 
 
@@ -55,7 +50,7 @@ function Home() {
         <div className={cx('header')}>
                 <PageHome />                
             <div className={cx('container')}>
-                <ImgHome />
+                <ImgHome17 />
             </div>
             </div>
          <div className={cx('header')}>
@@ -152,6 +147,12 @@ function Home() {
                 <PageHome16/>                
             <div className={cx('container')}>
                 <ImgHome16 />
+            </div>
+            </div> 
+             <div className={cx('header')}>
+                <PageHome/>                
+            <div className={cx('container')}>
+                <ImgHome />
             </div>
             </div> 
         </div>
