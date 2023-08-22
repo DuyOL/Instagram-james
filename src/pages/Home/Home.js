@@ -39,8 +39,7 @@ import ImgHome14 from './ImgHome/ImgHome14';
 import ImgHome15 from './ImgHome/ImgHome15';
 import ImgHome16 from './ImgHome/ImgHome16';
 import ImgHome17 from './ImgHome/ImgHome17';
-
-
+import ImgHome18 from './ImgHome/ImgHome18';
 
 const cx = classNames.bind(styles);
 
@@ -153,6 +152,126 @@ function Home() {
                 <PageHome/>                
             <div className={cx('container')}>
                 <ImgHome />
+            </div>
+            </div> 
+             <div className={cx('header')}>
+                <PageHome15/>                
+            <div className={cx('container')}>
+                <ImgHome18 />
+            </div>
+            </div> 
+            <div className={cx('header')}>
+                <PageHome />                
+            <div className={cx('container')}>
+                <ImgHome17 />
+            </div>
+            </div>
+         <div className={cx('header')}>
+                <PageHome1/>                
+            <div className={cx('container')}>
+                <ImgHome1 />
+            </div>
+            </div>
+            <div className={cx('header')}>
+                <PageHome2/>                
+            <div className={cx('container')}>
+                <ImgHome2 />
+            </div>
+            </div>
+             <div className={cx('header')}>
+                <PageHome3/>                
+            <div className={cx('container')}>
+                <ImgHome3 />
+            </div>
+            </div>
+            <div className={cx('header')}>
+                <PageHome4/>                
+            <div className={cx('container')}>
+                <ImgHome4 />
+            </div>
+            </div>
+             <div className={cx('header')}>
+                <PageHome5/>                
+            <div className={cx('container')}>
+                <ImgHome5 />
+            </div>
+            </div>
+            <div className={cx('header')}>
+                <PageHome6/>                
+            <div className={cx('container')}>
+                <ImgHome6 />
+            </div>
+            </div>
+            <div className={cx('header')}>
+                <PageHome7/>                
+            <div className={cx('container')}>
+                <ImgHome7 />
+            </div>
+            </div>
+             <div className={cx('header')}>
+                <PageHome8/>                
+            <div className={cx('container')}>
+                <ImgHome8 />
+            </div>
+            </div>
+            <div className={cx('header')}>
+                <PageHome9/>                
+            <div className={cx('container')}>
+                <ImgHome9 />
+            </div>
+            </div>
+             <div className={cx('header')}>
+                <PageHome10/>                
+            <div className={cx('container')}>
+                <ImgHome10 />
+            </div>
+            </div>
+            <div className={cx('header')}>
+                <PageHome11/>                
+            <div className={cx('container')}>
+                <ImgHome11 />
+            </div>
+            </div> 
+            <div className={cx('header')}>
+                <PageHome12/>                
+            <div className={cx('container')}>
+                <ImgHome12 />
+            </div>
+            </div> 
+            <div className={cx('header')}>
+                <PageHome13/>                
+            <div className={cx('container')}>
+                <ImgHome13 />
+            </div>
+            </div> 
+             <div className={cx('header')}>
+                <PageHome14/>                
+            <div className={cx('container')}>
+                <ImgHome14 />
+            </div>
+            </div> 
+             <div className={cx('header')}>
+                <PageHome15/>                
+            <div className={cx('container')}>
+                <ImgHome15 />
+            </div>
+            </div> 
+            <div className={cx('header')}>
+                <PageHome16/>                
+            <div className={cx('container')}>
+                <ImgHome16 />
+            </div>
+            </div> 
+             <div className={cx('header')}>
+                <PageHome/>                
+            <div className={cx('container')}>
+                <ImgHome />
+            </div>
+            </div> 
+             <div className={cx('header')}>
+                <PageHome15/>                
+            <div className={cx('container')}>
+                <ImgHome18 />
             </div>
             </div> 
         </div>

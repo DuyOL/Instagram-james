@@ -20,7 +20,7 @@ const pageHomes = [
     <PageHome18 />,
     <PageHome19 />,
     <PageHome13  />,
-    <PageHome13  />,
+    <PageHome13 />,
 ]
 
 function Real() {
