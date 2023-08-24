@@ -5,8 +5,8 @@ import config from '~/config';
 import {
     HomeIcon,
     HomeActiveIcon,
-    SearchIcons,
-    SearchActiveIcon,
+    // SearchIcons,
+    // SearchActiveIcon,
     DiscoverIcon,
     DiscoverActiveIcon,
     ReelsIcon,
@@ -27,7 +27,7 @@ function Sidebar() {
     return <aside className={cx('wrapper')}>
         <Menu>
             <MenuItem title="Trang chủ" to={config.routes.home} icon={<HomeIcon />} activeIcon={<HomeActiveIcon />} />
-            <MenuItem title="Tìm kiếm" to={config.routes.following} icon={<SearchIcons />} activeIcon={<SearchActiveIcon />} />
+            {/* <MenuItem title="Tìm kiếm" to={config.routes.following} icon={<SearchIcons />} activeIcon={<SearchActiveIcon />} /> */}
             <MenuItem title="Khám phá" to={config.routes.discover} icon={<DiscoverIcon />} activeIcon={<DiscoverActiveIcon />} />
             <MenuItem title="Phim ngắn" to={config.routes.real} icon={<ReelsIcon />} activeIcon={<ReelsActiveIcon />} />
             <MenuItem title="Tin nhắn" to={config.routes.message} icon={<MessageIcons />} activeIcon={<MessageActiveIcons />}/>
