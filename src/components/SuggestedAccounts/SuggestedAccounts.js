@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './SuggestedAccounts.module.scss';
 import AccountItem from "./AccountsItem";
 
+
 const cx = classNames.bind(styles);
 
 function SuggestedAccounts({label}) {

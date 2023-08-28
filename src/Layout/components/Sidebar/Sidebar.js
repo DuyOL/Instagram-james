@@ -16,6 +16,7 @@ import {
     NotificationIcon,
     NotificationActiveIcon,
     CreateIcon,
+    CreateIconActive,
 } from '~/components/Icons';
 import SuggestedAccounts from '~/components/SuggestedAccounts/SuggestedAccounts';
 
@@ -32,7 +33,7 @@ function Sidebar() {
             <MenuItem title="Phim ngắn" to={config.routes.real} icon={<ReelsIcon />} activeIcon={<ReelsActiveIcon />} />
             <MenuItem title="Tin nhắn" to={config.routes.message} icon={<MessageIcons />} activeIcon={<MessageActiveIcons />}/>
             <MenuItem title="Thông báo" to={config.routes.notification} icon={<NotificationIcon />} activeIcon={<NotificationActiveIcon />} />
-            <MenuItem title="Tạo" to={config.routes.upload} icon={<CreateIcon />} />
+            <MenuItem title="Tạo" to={config.routes.upload} icon={<CreateIcon />} activeIcon={<CreateIconActive />} />
         </Menu>
         <SuggestedAccounts label="Được đề xuất" />
         {/* <SuggestedAccounts label="Theo dõi tài khoản"/> */}

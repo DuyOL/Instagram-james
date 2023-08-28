@@ -1,4 +1,124 @@
-.wrapper{
-    margin-top: 14px;
-    margin-left: 370px;
+.wrapper {
+  margin-top: 14px;
+  margin-left: 370px;
+
+  .Header {
+    display: flex;
+    padding: 30px 0px 0px;
+    max-width: 869px;
+
+    // .Left-avatar {
+    //   // styles for left avatar if needed
+    // }
+
+    // .avatar {
+    //   // padding: 20px;
+    // }
+
+    .img-content {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-right: 30px;
+    }
+
+    .Right-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    // icon
+    .verification-icon {
+      margin-left: 5px; 
+      color: #0095f6;
+}
+
+
+    .username {
+      font-size: 2rem;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .buttons {
+      display: flex;
+      padding: 0px 30px;
+    }
+    .view-button {
+      margin-left: 10px;
+    }
+    .edit-button,
+    .view-button {
+      padding: 8px 20px;
+      border: none;
+      background-color: #e1dede;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 4px;
+      margin-top: 10px 20px;
+    }
+       .edit-button:hover,
+       .view-button:hover{
+      background-color: #beb9b9;
+     }
+
+    .folowing {
+      display: flex;
+      gap: 10px; 
+      margin-top: 16px; 
+    }
+    .folowing p {
+      margin-right: 40px;
+    }
+    .folowing-name{
+      margin-top: 26px; 
+      font-weight: 700;
+    }
+  }
+  // add-friend
+  .friend{
+    margin-top: 3rem;
+    display: flex;
+  }
+  .add-friend{
+    margin: 4px 16px;
+  }
+  .add-avatar{
+     width: 77px;
+     height: 77px;
+     border-radius: 50%;
+     border: 1px solid rgb(0, 0, 0);
+     cursor: pointer;
+  }
+  .add-name{
+      cursor: pointer;
+      color: #000;
+      text-align: center;
+      font-size: 1.6rem;
+  }
+  .friend-list {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 0;
+  max-height: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.show-more {
+  max-height: 1000px;
+  opacity: 1;
+  cursor: pointer;
+  transition: max-height 0.3s ease-in, opacity 0.3s ease-in;
+}
+
 }

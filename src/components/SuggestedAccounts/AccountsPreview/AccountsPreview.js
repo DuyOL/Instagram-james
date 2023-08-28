@@ -3,18 +3,25 @@ import styles from './AccountsPreview.module.scss';
 import Button from '~/components/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+
+import Folow1 from "~/components/Popper/Menu/images/Folow1.jpg";
+
+
+
 const cx = classNames.bind(styles);
+
 
 function AccountsPreview() {
     return ( 
         <div className={cx('wrapper')}>
             <div className={cx('header')}>
                 <img className={cx('avatar')}
-                    src='https://ss-images.saostar.vn/w800/2023/6/5/pc/1685940903393/saostar-o51kcnmf0vpv9evs.png'
-                    alt=''></img>
+                    src={Folow1}
+                    alt=''>
+                </img>
                 
                 <Button className={cx('folow-btn')} primary>
-                    Follow
+                    Theo dõi
                 </Button>
             </div>
             <div className={cx('body')}>

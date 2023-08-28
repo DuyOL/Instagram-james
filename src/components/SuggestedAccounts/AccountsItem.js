@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { wrapper as PopperWrapper } from '~/components/Popper';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import AccountsPreview from './AccountsPreview';
+import Folow1 from "~/components/Popper/Menu/images/Folow1.jpg";
 
 const cx = classNames.bind(styles);
 
@@ -32,7 +33,7 @@ function AccountsItem() {
                 <div className={cx('account-item')}>
                     <img
                         className={cx('avatar')}
-                        src='https://ss-images.saostar.vn/w800/2023/6/5/pc/1685940903393/saostar-o51kcnmf0vpv9evs.png'
+                        src={Folow1}
                         alt=''
                     />
                     <div className={cx('item-info')}>

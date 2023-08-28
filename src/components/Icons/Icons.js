@@ -303,6 +303,31 @@ export const CreateIcon = ({ width = '3.2rem', height = '3.2rem', className }) =
     </line>
     </svg>
 );
+export const CreateIconActive = ({ width = '3.2rem', height = '3.2rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        color="rgb(0, 0, 0)"       // Màu nền đen
+        fill="none"               // Không sử dụng fill cho nền
+        viewBox="0 0 24 24"
+    >
+        <rect x="2" y="2" width="20" height="20" fill="currentColor" rx="4" ry="4"></rect>  {/* Hình vuông màu đen */}
+        <path d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
+        <line stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line>
+        <line stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line>
+        <line x1="7" y1="12" x2="17" y2="12" stroke="white" strokeWidth="2"></line>   {/* Đường ngang màu trắng */}
+        <line x1="12" y1="7" x2="12" y2="17" stroke="white" strokeWidth="2"></line>   {/* Đường dọc màu trắng */}
+    </svg>
+);
+
+
+
+
+
+
+
+
 export const MessageIcon = ({ width = '2.6rem', height = '2.6rem', className }) => (
     <svg
         className={className}
