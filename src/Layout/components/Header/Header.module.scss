@@ -76,6 +76,10 @@
   cursor: pointer;
 }
 
+
+
+
+// Đăng nhập
 .login-container {
   display: flex;
   justify-content: center;
@@ -137,6 +141,18 @@
   }
  
 }
+.login-with-google {
+  margin-top: 20px;
+  text-align: center;
+  color:  rgb(196, 43, 43);
+  cursor: pointer;
+   .google-text {
+    margin-left: 10px;
+   color:  rgb(196, 43, 43);
+  }
+}
+
+
 
 .login-with-facebook {
   margin-top: 20px;
@@ -163,5 +179,13 @@ margin-top: 20px;
   display: inline-block;
   color: #000000;
   cursor: pointer;
+}
+.Account{
+  padding: 0px 4px;
+}
+.Register{
+display: inline-block;
+color: #1877f2;
+cursor: pointer;
 }
 }
