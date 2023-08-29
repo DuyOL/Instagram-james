@@ -1,6 +1,8 @@
+import React, { useState } from 'react';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import LoginBox from './LoginBox';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faEllipsisVertical,
@@ -90,8 +92,8 @@ const MENU_ITEMS = [
     },
 ];
 function Header() {
-
-    const currentUser = true;
+    const [showLogin, setShowLogin] = useState(false);
+    const currentUser = false;
 
    
     //handle logic
@@ -160,7 +162,7 @@ function Header() {
                     ) : (            
                 <>       
                     <Button text >Upload</Button>
-                    <Button primary >Log in</Button>
+                    <Button primary onClick={() => setShowLogin(true)}>Log in</Button>
                     
                 </> 
                     )}
@@ -179,6 +181,11 @@ function Header() {
                     </Menu>
                 </div>
             </div>
+            {showLogin && (
+               <div className={cx('login-container')}>
+                    <LoginBox onClose={() => setShowLogin(false)} /> 
+               </div>
+            )}
         </header>
     );
 }
