@@ -6,7 +6,8 @@ import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import styles from './Header.module.scss';
 import Logo from './Images/instagram-1.svg';
 import RegisterBox from './RegisterBox';
-
+import myFirebaseApp from './myFirebaseApp';
+import { getAuth, GoogleAuthProvider, FacebookAuthProvider, signInWithPopup } from 'firebase/auth'; // Update import path
 const cx = classNames.bind(styles);
 
 function LoginBox({ onClose }) {
@@ -14,6 +15,26 @@ function LoginBox({ onClose }) {
 
   const handleShowRegister = () => {
     setShowRegister(true);
+  };
+
+  const handleLogin = async (provider) => {
+    try {
+      const auth = getAuth(myFirebaseApp);
+
+      let authProvider = null;
+
+      if (provider === 'google') {
+        authProvider = new GoogleAuthProvider();
+      } else if (provider === 'facebook') {
+        authProvider = new FacebookAuthProvider();
+      }
+
+      if (authProvider) {
+        await signInWithPopup(auth, authProvider);
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+    }
   };
 
   if (showRegister) {
@@ -30,12 +51,12 @@ function LoginBox({ onClose }) {
       </div>
       <input type="text" placeholder="Tài Khoản" />
       <input type="password" placeholder="Mật khẩu" />
-      <button className={cx('login-button')}>Đăng Nhập</button>
-      <div className={cx('login-with-facebook')}>
+      <button className={cx('login-button')} onClick={() => handleLogin('google')}>Đăng Nhập</button>
+      <div className={cx('login-with-facebook')} onClick={() => handleLogin('facebook')}>
         <FontAwesomeIcon icon={faFacebook} bounce />
         <span className={cx('facebook-text')}>Đăng nhập bằng Facebook</span>
       </div>
-      <div className={cx('login-with-google')}>
+      <div className={cx('login-with-google')} onClick={() => handleLogin('google')}>
         <FontAwesomeIcon icon={faGoogle} bounce />
         <span className={cx('google-text')}>Đăng nhập bằng Google</span>
       </div>
