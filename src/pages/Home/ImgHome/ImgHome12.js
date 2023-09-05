@@ -39,14 +39,14 @@ function ImgHome() {
           </div>
         </div>
         <div className={cx("detail-list")}>
-          <p className={cx("detail-like")}>1.331 lượt xem</p>
+          <p className={cx("detail-like")}>1.331 view</p>
           <p className={cx("detail-comment")}>
-            Kết quả thì ai cũng biết chúng tôi  <br />
-            Chỉ cần 1% cơ hội là thắng <br />
+           As a result, everyone knows us  <br />
+           Just 1% chance to win <br />
           </p>
-          <p className={cx("detail-more")}>Xem thêm</p>
-          <p className={cx("detail-translation")}>Xem bản dịch</p>
-          <p className={cx("detail-seeall")}>Xem tất cả 812 bình luận</p>
+          <p className={cx("detail-more")}>See more</p>
+          <p className={cx("detail-translation")}>See translation</p>
+          <p className={cx("detail-seeall")}>See all 812 comment</p>
         </div>
         <div>
           <form onSubmit={handleCommentSubmit}>

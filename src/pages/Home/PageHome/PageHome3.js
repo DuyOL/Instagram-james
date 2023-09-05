@@ -18,7 +18,7 @@ function PageHome() {
                 <div className={cx('body')}>
                     <p className={cx('name')}>
                         <strong>Chúng ta của sau này</strong>
-                        <strong className={cx('time-name')}>8 giờ trước</strong>
+                        <strong className={cx('time-name')}>8 hours ago</strong>
                     </p>
                     <strong className={cx('nickname')}>Crush</strong>
                 </div>

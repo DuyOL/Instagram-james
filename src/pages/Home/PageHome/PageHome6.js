@@ -19,9 +19,9 @@ function PageHome() {
                     <p className={cx('name')}>
                         <strong>Người đến từ địa ngục</strong>
                         {/* <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} /> */}
-                        <strong className={cx('time-name')}>9 giờ trước</strong>
+                        <strong className={cx('time-name')}>9 hours ago</strong>
                     </p>
-                    <strong className={cx('nickname')}>Sát thủ đông anh</strong>
+                    <strong className={cx('nickname')}>Dong Anh Assassin</strong>
                 </div>
                 <div className={cx('footer')}>
                         <FontAwesomeIcon className={cx('ellipsis')} icon={faEllipsis} />

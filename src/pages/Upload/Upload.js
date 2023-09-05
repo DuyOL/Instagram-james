@@ -16,7 +16,6 @@ function Upload() {
         const newImages = acceptedFiles.map(file => URL.createObjectURL(file));
         setUploadedImages(prevImages => [...prevImages, ...newImages]);
 
-        // Simulate an upload delay
         setTimeout(() => {
             setUploading(false);
         }, 1000);
@@ -31,7 +30,7 @@ function Upload() {
 
     const handleAddImage = () => {
         if (!uploading) {
-            // Implement your logic to add new images here
+            
         }
     };
 
@@ -39,7 +38,7 @@ function Upload() {
 
     return (
         <div className={cx('wrapper')}>
-            <h1>Tạo bài viết mới</h1>
+            <h1>Create new article</h1>
             <div {...getRootProps()} className={cx('dropzone', { 'active': isDragActive })}>
                 <input {...getInputProps()} />
                 <div className={cx('uploaded-images')}>
@@ -54,8 +53,8 @@ function Upload() {
                 </div>
                 {uploadedImages.length === 0 && (
                     <p>
-                        Kéo và thả hình ảnh hoặc video vào đây
-                        hoặc nhấp để chọn <br />
+                       Drag and drop an image or video here
+                       or click to select <br />
                     </p>
                 )}
                 {!uploading && (
@@ -64,7 +63,7 @@ function Upload() {
                     </div>
                 )}
             </div>
-            <button className={cx('button')}>Chọn từ máy tính</button>
+            <button className={cx('button')}>Choose from computer</button>
         </div>
     );
 }

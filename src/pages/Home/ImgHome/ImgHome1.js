@@ -39,14 +39,14 @@ function ImgHome() {
           </div>
         </div>
         <div className={cx("detail-list")}>
-          <p className={cx("detail-like")}>52.321.331 lượt xem</p>
+          <p className={cx("detail-like")}>52.321.331 view</p>
           <p className={cx("detail-comment")}>
-            Tôi sẽ tranh cử tổng thống năm 2024<br />
-            Hãy ủng hộ tôi nước mỹ sẽ là một cườngg quốc tài chính
+            I will run for president in 2024<br />
+            Please support me and America will be a financial powerhouse
           </p>
-          <p className={cx("detail-more")}>Xem thêm</p>
-          <p className={cx("detail-translation")}>Xem bản dịch</p>
-          <p className={cx("detail-seeall")}>Xem tất cả 86.812 bình luận</p>
+          <p className={cx("detail-more")}>See more</p>
+          <p className={cx("detail-translation")}>See translation</p>
+          <p className={cx("detail-seeall")}>See all 86.812 comment</p>
         </div>
         <div>
           <form onSubmit={handleCommentSubmit}>

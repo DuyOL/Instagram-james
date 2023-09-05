@@ -12,8 +12,8 @@ function Notification() {
             <div className={cx('icon')}>
                 <FontAwesomeIcon icon={faBell} />
             </div>
-            <h1>Hoạt động trên bài viết của bạn</h1>
-            <p>Khi có người thích hoặc bình luận về một trong những bài viết của bạn, bạn sẽ nhìn thấy nó ở đây.</p>
+            <h1>Work on your posts</h1>
+            <p>When someone likes or comments on one of your posts, you'll see it here.</p>
         </div>
     );
 }

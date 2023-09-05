@@ -18,7 +18,7 @@ function PageHome() {
                 <div className={cx('body')}>
                     <p className={cx('name')}>
                     <strong>FC Real Madrid VN</strong>
-                        <strong className={cx('time-name')}> 1 giờ trước</strong>
+                        <strong className={cx('time-name')}> 1 hours ago </strong>
                     </p>
                     <strong className={cx('nickname')}>Fan Real VN</strong>
                 </div>

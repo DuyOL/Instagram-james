@@ -39,18 +39,18 @@ function ImgHome() {
           </div>
         </div>
         <div className={cx("detail-list")}>
-          <p className={cx("detail-like")}>20.994.381 lượt xem</p>
+          <p className={cx("detail-like")}>20.994.381 view</p>
           <p className={cx("detail-comment")}>
-            Vô cùng tự hào vì đã giúp đội giành được chiếc cúp quan trọng <br />
-            này lần đầu tiên! Cảm ơn tất cả mọi người trong câu lạc bộ đã   <br />
-            tham gia vào thành tích tuyệt vời này  và cảm ơn gia đình và bạn <br />
-            bè của tôi đã luôn ở bên cạnh tôi! <br />
-            Sự ủng hộ tuyệt vời từ người hâm mộ của chúng tôi!  <br />
-            Cái này cũng thuộc về bạn!💛💙
+            Extremely proud to have helped the team win an  <br />
+            important trophy this first time! Thank you to everyone  <br />
+            in the club Take part in this great achievement and thank your  <br />
+            family and friends My friends have always been by my side! <br />
+            Great support from our fans!  <br />
+            This belongs to you too!💛💙
           </p>
-          <p className={cx("detail-more")}>Xem thêm</p>
-          <p className={cx("detail-translation")}>Xem bản dịch</p>
-          <p className={cx("detail-seeall")}>Xem tất cả 331.812 bình luận</p>
+          <p className={cx("detail-more")}>See more</p>
+          <p className={cx("detail-translation")}>See translation</p>
+          <p className={cx("detail-seeall")}>See all 331.812 comment</p>
         </div>
         <div>
           <form onSubmit={handleCommentSubmit}>

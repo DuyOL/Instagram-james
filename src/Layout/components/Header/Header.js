@@ -34,7 +34,7 @@ const cx = classNames.bind(styles);
 const MENU_ITEMS = [
   {
     icon: <FontAwesomeIcon icon={faEarthAsia} />,
-    title: 'English',
+    title: 'Language',
     children: {
       title: 'Language',
       data: [
@@ -45,42 +45,6 @@ const MENU_ITEMS = [
         {
           code: 'vi',
           title: 'Tiếng Việt',
-        },
-        {
-          code: 'ar',
-          title: 'عربي',
-        },
-        {
-          code: 'pr',
-          title: 'Français',
-        },
-        {
-          code: 'hq',
-          title: '한국인',
-        },
-        {
-          code: 'cn',
-          title: '中国人',
-        },
-        {
-          code: 'cr',
-          title: 'Português',
-        },
-        {
-          code: 'bn',
-          title: 'Español',
-        },
-        {
-          code: 'dt',
-          title: 'עִברִית',
-        },
-        {
-          code: 'dc',
-          title: 'Русский',
-        },
-        {
-          code: 'dm',
-          title: 'dansk',
         },
       ],
     },
@@ -96,7 +60,7 @@ const MENU_ITEMS = [
   },
   {
     icon: <FontAwesomeIcon icon={faSignOut} />,
-    title: 'LogOut',
+    title: 'Log Out',
   },
 ];
 

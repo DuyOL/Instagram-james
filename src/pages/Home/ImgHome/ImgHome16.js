@@ -53,13 +53,13 @@ function ImgHome() {
           </div>
         </div>
         <div className={cx("detail-list")}>
-          <p className={cx("detail-like")}>134 .214.331 lượt xem</p>
+          <p className={cx("detail-like")}>134 .214.331 view</p>
           <p className={cx("detail-comment")}>
-            Cậu Bé Vàng Kylian Mbappe  <br />            
+          Golden Boy Kylian Mbappe <br />            
           </p>
-          <p className={cx("detail-more")}>Xem thêm</p>
-          <p className={cx("detail-translation")}>Xem bản dịch</p>
-          <p className={cx("detail-seeall")}>Xem tất cả 19.812 bình luận</p>
+          <p className={cx("detail-more")}>See more</p>
+          <p className={cx("detail-translation")}>See translation</p>
+          <p className={cx("detail-seeall")}>See all 19.812 comment</p>
         </div>
         <div>
           <form onSubmit={handleCommentSubmit}>

@@ -39,14 +39,14 @@ function ImgHome() {
           </div>
         </div>
         <div className={cx("detail-list")}>
-          <p className={cx("detail-like")}>126.381 lượt xem</p>
+          <p className={cx("detail-like")}>126.381 view</p>
           <p className={cx("detail-comment")}>
-             🏆 Đã 6️⃣ năm kể từ Siêu Cúp Châu Âu lần thứ tư của chúng tôi! <br/>
+            🏆 It's been 6️⃣ years since our fourth European Super Cup! <br/>
               🗓️ 08/08/2017
           </p>
-          <p className={cx("detail-more")}>Xem thêm</p>
-          <p className={cx("detail-translation")}>Xem bản dịch</p>
-          <p className={cx("detail-seeall")}>Xem tất cả 11.144.812 bình luận</p>
+          <p className={cx("detail-more")}>See more</p>
+          <p className={cx("detail-translation")}>See translation</p>
+          <p className={cx("detail-seeall")}>See all 11.144.812 comment</p>
         </div>
         <div>
           <form onSubmit={handleCommentSubmit}>
