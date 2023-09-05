@@ -2,8 +2,8 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
 const config = {
-  apiKey: 'AIzaSyBIUY1aU-C2e5tYOYkOYoUtBhlCvVuF_j4',
-  authDomain: 'instagram-3d649.firebaseapp.com',
+  apiKey: process.env.REACT_APP_FIREBASE_API,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
 };
 
 const myFirebaseApp = initializeApp(config);

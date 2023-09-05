@@ -7,10 +7,10 @@ const uiConfig = {
   signInFlow: 'popup',
   signInOptions: [
     myFirebaseApp.auth.GoogleAuthProvider.PROVIDER_ID,
-    myFirebaseApp.auth.FacebookAuthProvider.PROVIDER_ID
+    myFirebaseApp.auth.FacebookAuthProvider.PROVIDER_ID,
   ],
   callbacks: {
-    signInSuccessWithAuthResult: () => true, // Change this line
+    signInSuccessWithAuthResult: () => false,
   },
 };
 
@@ -20,6 +20,11 @@ function FirebaseConfig() {
   useEffect(() => {
     const unregisterAuthObserver = auth.onAuthStateChanged(user => {
       setIsSignedIn(!!user);
+      if (user) {
+        user.getIdToken().then(token => {
+          console.log('Token:', token);
+        });
+      }
     });
     return () => unregisterAuthObserver();
   }, []);
@@ -28,27 +33,27 @@ function FirebaseConfig() {
     signOut(auth)
       .then(() => {
         setIsSignedIn(false);
+        console.log('Đăng xuất thành công');
       })
       .catch(error => {
         console.error('Sign out error:', error);
       });
   };
 
-  if (!isSignedIn) {
-    return (
-      <div>
-        <h1>My App</h1>
-        <p>Vui lòng đăng nhập:</p>
-        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={auth} />
-      </div>
-    );
-  }
-
   return (
     <div>
       <h1>My App</h1>
-      <p>Xin chào {auth.currentUser.displayName}! Bạn đã đăng nhập thành công!</p>
-      <button onClick={handleSignOut}>Đăng xuất</button>
+      {!isSignedIn ? (
+        <>
+          <p>Vui lòng đăng nhập:</p>
+          <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={auth} />
+        </>
+      ) : (
+        <>
+          <p>Xin chào {auth.currentUser.displayName}! Bạn đã đăng nhập thành công!</p>
+          <button onClick={handleSignOut}>Đăng xuất</button>
+        </>
+      )}
     </div>
   );
 }
