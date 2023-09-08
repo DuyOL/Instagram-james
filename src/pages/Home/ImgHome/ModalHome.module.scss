@@ -1,0 +1,139 @@
+$button-padding-y: 10px; 
+$button-padding-x: 25px; 
+
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
+}
+
+.modal-title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.login-button {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  padding: $button-padding-y $button-padding-x;
+  border: none;
+  background-color: #1877f2;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.login-button.google {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  padding: $button-padding-y ($button-padding-x + 17px); 
+  border: none;
+  background-color: #18996a;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.login-button.phone {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  padding: $button-padding-y ($button-padding-x + 18px);
+  border: none;
+  background-color: #6e310d;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+.login-button.QRcode {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  padding: $button-padding-y ($button-padding-x + 12px); 
+  border: none;
+  background-color: #000000;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+.login-button:hover,
+.login-button.google:hover,
+.login-button.phone:hover,
+.login-button.QRcode:hover {
+  opacity: 0.5;
+}
+.phone-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  display: inline;
+  cursor: pointer;
+}
+
+.facebook-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  margin-left: 12px;
+  display: inline;
+  cursor: pointer;
+}
+
+.google-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  display: inline;
+  cursor: pointer;
+}
+.QRcode-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  display: inline;
+  cursor: pointer;
+}
+
+.modal-footer{
+    font-size: 15px;
+}
