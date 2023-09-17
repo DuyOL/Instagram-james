@@ -26,8 +26,8 @@ import Image from '~/components/Image';
 import Search from '../Search';
 import myAvatar from '~/assets/images/avatar.jpg';
 
-import { auth } from './myFirebaseApp'; // Import Firebase Auth
-import { signOut } from 'firebase/auth'; // Import Firebase Auth's signOut function
+import { auth } from './myFirebaseApp'; 
+import { signOut } from 'firebase/auth'; 
 
 const cx = classNames.bind(styles);
 

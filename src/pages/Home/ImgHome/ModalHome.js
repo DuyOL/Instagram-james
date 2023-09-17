@@ -4,7 +4,7 @@ import { faPhone, faQrcode, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import styles from "./ModalHome.module.scss";
 import classNames from "classnames/bind";
-
+import Logo from './Image/instagram-1.svg';
 const cx = classNames.bind(styles);
 
 const Modal = ({ isModalOpen, closeModal }) => {
@@ -15,7 +15,9 @@ const Modal = ({ isModalOpen, closeModal }) => {
           <span className={cx('close-button')} onClick={closeModal}>
             <FontAwesomeIcon icon={faTimes} />
           </span>
-          <h3 className={cx('modal-title')}>Log in now</h3>
+          <div className={cx('logo-container')}>
+            <img src={Logo} alt="Instagram Logo" className={cx('logo')} />
+          </div>
           <button className={`${cx('login-button')} ${cx('phone')}`}>
             <FontAwesomeIcon icon={faPhone} bounce className={cx('phone-icon')} /> Sign in with Phone
           </button>

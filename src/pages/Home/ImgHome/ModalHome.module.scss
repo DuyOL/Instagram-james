@@ -1,6 +1,12 @@
 $button-padding-y: 10px; 
 $button-padding-x: 25px; 
-
+.logo {
+  max-width: 200px;
+  height: 81px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .custom-modal {
   position: fixed;
   top: 0;
@@ -25,26 +31,25 @@ $button-padding-x: 25px;
   width: 300px;
 }
 
-.modal-title {
-  font-size: 25px;
-  margin-bottom: 20px;
-}
+// .modal-title {
+//   font-size: 14px;
+//   margin-bottom: 20px;
+// }
 
 .close-button {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .login-button {
   margin-top: 5px;
   margin-bottom: 25px;
   padding: $button-padding-y $button-padding-x;
-  border: none;
-  background-color: #1877f2;
-  color: white;
+  border: 1px solid #e3e3e4;
+  color: rgb(0, 0, 0);
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
@@ -58,9 +63,8 @@ $button-padding-x: 25px;
   margin-top: 5px;
   margin-bottom: 25px;
   padding: $button-padding-y ($button-padding-x + 17px); 
-  border: none;
-  background-color: #18996a;
-  color: white;
+  border: 1px solid #e3e3e4;
+  color: rgb(0, 0, 0);
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
@@ -74,9 +78,8 @@ $button-padding-x: 25px;
   margin-top: 5px;
   margin-bottom: 25px;
   padding: $button-padding-y ($button-padding-x + 18px);
-  border: none;
-  background-color: #6e310d;
-  color: white;
+  border: 1px solid #e3e3e4;
+  color: rgb(0, 0, 0);
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
@@ -89,9 +92,8 @@ $button-padding-x: 25px;
   margin-top: 5px;
   margin-bottom: 25px;
   padding: $button-padding-y ($button-padding-x + 12px); 
-  border: none;
-  background-color: #000000;
-  color: white;
+  border: 1px solid #e3e3e4;
+  color: rgb(0, 0, 0);
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
@@ -104,32 +106,37 @@ $button-padding-x: 25px;
 .login-button.google:hover,
 .login-button.phone:hover,
 .login-button.QRcode:hover {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .phone-icon {
   font-size: 20px;
-  margin-right: 10px;
+  margin-right: 13px;
   display: inline;
+  padding: 0px;
+  color: rgb(6, 255, 6);
   cursor: pointer;
 }
 
 .facebook-icon {
   font-size: 20px;
-  margin-right: 10px;
-  margin-left: 12px;
+  margin-right: 13px;
+  margin-left: 16px;
   display: inline;
+  color: rgb(30, 0, 255);
   cursor: pointer;
 }
 
 .google-icon {
   font-size: 20px;
-  margin-right: 10px;
+  margin-right: 13px;
   display: inline;
   cursor: pointer;
+  color: #ff0000;
 }
 .QRcode-icon {
   font-size: 20px;
-  margin-right: 10px;
+  margin-right: 9px;
+  margin-left: 8px;
   display: inline;
   cursor: pointer;
 }

@@ -4,6 +4,7 @@ import classNames from "classnames/bind";
 import styles from "~/pages/Home/Home.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faHeart, faMessage } from "@fortawesome/free-regular-svg-icons";
+import Modal from './ModalHome'; 
 
 const cx = classNames.bind(styles);
 
@@ -11,6 +12,7 @@ function ImgHome() {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const [videoStarted, setVideoStarted] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); 
   const videoRef = useRef(null);
 
   const handleCommentChange = (event) => {
@@ -38,7 +40,6 @@ function ImgHome() {
         <div className={cx("video-container")}>
           {videoStarted ? null : (
             <div className={cx("play-button")} onClick={startVideo}>
-             
             </div>
           )}
           <video ref={videoRef} className={cx("video-content4")} controls>
@@ -47,9 +48,21 @@ function ImgHome() {
         </div>
         <div className={cx("interact")}>
           <div className={cx("icon")}>
-            <FontAwesomeIcon className={cx("love-icon")} icon={faHeart} />
-            <FontAwesomeIcon className={cx("comment-icon")} icon={faComment} />
-            <FontAwesomeIcon className={cx("message-icon")} icon={faMessage} />
+            <FontAwesomeIcon
+              className={cx("love-icon")}
+              icon={faHeart}
+              onClick={() => setIsModalOpen(true)}
+            />
+            <FontAwesomeIcon
+              className={cx("comment-icon")}
+              icon={faComment}
+              onClick={() => setIsModalOpen(true)} 
+            />
+            <FontAwesomeIcon
+              className={cx("message-icon")}
+              icon={faMessage}
+              onClick={() => setIsModalOpen(true)} 
+            />
           </div>
         </div>
         <div className={cx("detail-list")}>
@@ -65,19 +78,21 @@ function ImgHome() {
         </div>
         <div>
           <form onSubmit={handleCommentSubmit}>
-            <input className={cx('comment')}
+            <input
+              className={cx('comment')}
               type="text"
               value={comment}
               onChange={handleCommentChange}
               placeholder="Thêm bình luận ..."
             />
-            {/* <button type="submit">Gửi</button> */}
           </form>
         </div>
         {comments.map((comment, index) => (
           <p key={index}>{comment}</p>
         ))}
       </div>
+      {/* Hiển thị Modal nếu isModalOpen là true */}
+      <Modal isModalOpen={isModalOpen} closeModal={() => setIsModalOpen(false)} />
     </div>
   );
 }

@@ -4,12 +4,14 @@ import classNames from "classnames/bind";
 import styles from "~/pages/Home/Home.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faHeart, faMessage } from "@fortawesome/free-regular-svg-icons";
+import Modal from "./ModalHome"; 
 
 const cx = classNames.bind(styles);
 
 function ImgHome() {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleCommentChange = (event) => {
     setComment(event.target.value);
@@ -23,6 +25,14 @@ function ImgHome() {
     }
   };
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className={cx("container")}>
       <div className={cx("content")}>
@@ -33,9 +43,9 @@ function ImgHome() {
         />
         <div className={cx("interact")}>
           <div className={cx("icon")}>
-            <FontAwesomeIcon className={cx("love-icon")} icon={faHeart} />
-            <FontAwesomeIcon className={cx("comment-icon")} icon={faComment} />
-            <FontAwesomeIcon className={cx("message-icon")} icon={faMessage} />
+            <FontAwesomeIcon className={cx("love-icon")} icon={faHeart} onClick={openModal} />
+            <FontAwesomeIcon className={cx("comment-icon")} icon={faComment} onClick={openModal} />
+            <FontAwesomeIcon className={cx("message-icon")} icon={faMessage} onClick={openModal} />
           </div>
         </div>
         <div className={cx("detail-list")}>
@@ -43,24 +53,27 @@ function ImgHome() {
           <p className={cx("detail-comment")}>
             Where there is a will there is a way <br />
           </p>
-          <p className={cx("detail-more")}>See more</p>
+             <p className={cx("detail-more")}>See more</p>
           <p className={cx("detail-translation")}>See translation</p>
-          <p className={cx("detail-seeall")}>See all 812 comment</p>
+          <p className={cx("detail-seeall")}>See all 12 comment</p>
         </div>
         <div>
           <form onSubmit={handleCommentSubmit}>
-            <input className={cx('comment')}
+            <input
+              className={cx('comment')}
               type="text"
               value={comment}
               onChange={handleCommentChange}
               placeholder="Thêm bình luận ..."
             />
-            {/* <button type="submit">Gửi</button> */}
           </form>
         </div>
         {comments.map((comment, index) => (
           <p key={index}>{comment}</p>
         ))}
+
+        {/* Sử dụng component Modal */}
+        <Modal isModalOpen={isModalOpen} closeModal={closeModal} />
       </div>
     </div>
   );

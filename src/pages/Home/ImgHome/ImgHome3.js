@@ -4,6 +4,7 @@ import classNames from "classnames/bind";
 import styles from "~/pages/Home/Home.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faHeart, faMessage } from "@fortawesome/free-regular-svg-icons";
+import ModalHome from './ModalHome'; 
 
 const cx = classNames.bind(styles);
 
@@ -11,6 +12,7 @@ function ImgHome() {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const [videoStarted, setVideoStarted] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const videoRef = useRef(null);
 
   const handleCommentChange = (event) => {
@@ -37,9 +39,7 @@ function ImgHome() {
       <div className={cx("content")}>
         <div className={cx("video-container")}>
           {videoStarted ? null : (
-            <div className={cx("play-button")} onClick={startVideo}>
-             
-            </div>
+            <div className={cx("play-button")} onClick={startVideo}></div>
           )}
           <video ref={videoRef} className={cx("video-content")} controls>
             <source src={video} type="video/mp4" />
@@ -47,16 +47,27 @@ function ImgHome() {
         </div>
         <div className={cx("interact")}>
           <div className={cx("icon")}>
-            <FontAwesomeIcon className={cx("love-icon")} icon={faHeart} />
-            <FontAwesomeIcon className={cx("comment-icon")} icon={faComment} />
-            <FontAwesomeIcon className={cx("message-icon")} icon={faMessage} />
+            <FontAwesomeIcon
+              className={cx("love-icon")}
+              icon={faHeart}
+              onClick={() => setIsModalOpen(true)} 
+            />
+            <FontAwesomeIcon
+              className={cx("comment-icon")}
+              icon={faComment}
+              onClick={() => setIsModalOpen(true)} 
+            />
+            <FontAwesomeIcon
+              className={cx("message-icon")}
+              icon={faMessage}
+              onClick={() => setIsModalOpen(true)} 
+            />
           </div>
         </div>
         <div className={cx("detail-list")}>
           <p className={cx("detail-like")}>21.331 view</p>
           <p className={cx("detail-comment")}>
             Do you like me ? <br />
-            
           </p>
           <p className={cx("detail-more")}>See more</p>
           <p className={cx("detail-translation")}>See translation</p>
@@ -64,19 +75,21 @@ function ImgHome() {
         </div>
         <div>
           <form onSubmit={handleCommentSubmit}>
-            <input className={cx('comment')}
+            <input
+              className={cx('comment')}
               type="text"
               value={comment}
               onChange={handleCommentChange}
               placeholder="Thêm bình luận ..."
             />
-            {/* <button type="submit">Gửi</button> */}
           </form>
         </div>
         {comments.map((comment, index) => (
           <p key={index}>{comment}</p>
         ))}
       </div>
+      {/* ModalHome */}
+      <ModalHome isModalOpen={isModalOpen} closeModal={() => setIsModalOpen(false)} />
     </div>
   );
 }

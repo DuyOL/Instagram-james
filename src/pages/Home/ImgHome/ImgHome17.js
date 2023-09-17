@@ -58,6 +58,9 @@ function ImgHome() {
             Great support from our fans!  <br />
             This belongs to you too!💛💙
           </p>
+             <p className={cx("detail-more")}>See more</p>
+          <p className={cx("detail-translation")}>See translation</p>
+          <p className={cx("detail-seeall")}>See all 914.812 comment</p>
         </div>
         <div>
           <form onSubmit={handleCommentSubmit}>

@@ -51,12 +51,12 @@ function ImgHome() {
         <div className={cx("detail-list")}>
           <p className={cx("detail-like")}>52.321.331 view</p>
           <p className={cx("detail-comment")}>
-            I will run for president in 2024<br />
+             I will run for president in 2024<br />
             Please support me and America will be a financial powerhouse
           </p>
-          <p className={cx("detail-more")}>See more</p>
+           <p className={cx("detail-more")}>See more</p>
           <p className={cx("detail-translation")}>See translation</p>
-          <p className={cx("detail-seeall")}>See all 86.812 comment</p>
+          <p className={cx("detail-seeall")}>See all 114.812 comment</p>
         </div>
         <div>
           <form onSubmit={handleCommentSubmit}>
@@ -72,9 +72,7 @@ function ImgHome() {
         {comments.map((comment, index) => (
           <p key={index}>{comment}</p>
         ))}
-        
-        {/* Modal component */}
-        {isModalOpen && <Modal closeModal={closeModal} />}
+        <Modal isModalOpen={isModalOpen} closeModal={closeModal} />
       </div>
     </div>
   );
